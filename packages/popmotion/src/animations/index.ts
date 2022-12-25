@@ -130,5 +130,8 @@ export function animate<V = number>({
             onStop?.()
             driverControls.stop()
         },
+        sample: (t: number) => {
+            return animation.next(Math.max(0, t))
+        },
     }
 }
